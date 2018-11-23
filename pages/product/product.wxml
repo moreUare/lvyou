@@ -1,0 +1,74 @@
+<!--pages/product/product.wxml-->
+<view class='product'>
+  <!--头部按钮-->
+  <view class='head_button' wx:if="{{OptionSwitch}}">
+    <view bindtap='openDetail' style='background:{{bgcolor1}}'><text style='color:{{color1}}'>详情</text></view>
+    <view bindtap='openNotice' style='background:{{bgcolor2}}'><text style='color:{{color2}}'>须知</text></view>
+    <view bindtap='openRelated' style='background:{{bgcolor3}}'><text style='color:{{color3}}'>相关产品</text></view>
+  </view>
+  <!--中间图片  详情-->
+  <view class='content_image' wx:if="{{detail}}">
+    <view class='holder' wx:for="{{productData.goods_snap.detail_long_images}}" wx:key="{{productData.id}}">
+      <image style='width:689rpx;' src='{{item.image_url}}' mode="widthFix"></image>
+    </view>
+  </view>
+  <!-- 须知 -->
+  <view class="content_notice" wx:if="{{notice}}">
+    <view class='rule'>
+      {{productData.goods_snap.rule}} 
+    </view>
+  </view>
+  <!-- 相关产品 -->
+  <view class='content_related holder' wx:if="{{related}}">
+    <!--content-->
+    <view class='content' wx:for="{{relatedshop}}" wx:key="{{relatedshop.id}}" data-id='{{item.goods_snap.goods_id}}' bindtap='goShop'> 
+      <!--图片-->
+      <view class='img'>
+        <image src='{{item.goods_snap.wide_cover_image.image_url}}' style='width:690rpx;height:260rpx;' class='content_img'></image>
+      </view>
+      <!--产品信息-->
+      <view class='content_text_one'>
+        <view class='bigTitle'><text>{{item.goods_snap.name}}</text></view>
+        <view class='position'>
+          <image src='../../images/dingwei.png'></image>
+          <text>{{item.shop.detail_address}}</text>
+        </view>
+      </view>
+      <view class='content_text_two'>
+        <text>{{item.goods_snap.description}}</text>
+      </view>
+      <view class='content_text_three'>
+        <view class='price'>
+          <text>￥{{item.goods_snap.price}}</text><text>￥{{item.goods_snap.original_price}}</text><text>已售{{item.sell_count}}</text>
+        </view>
+        <view class='tag'>
+          <text wx:for="{{item.shop.shop_tags}}" wx:key="{{item.id}}" wx:if="{{index < 2}}">{{item.tag}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 购买选项 -->
+  <view class='GoToBuy' wx:if="{{GoBy}}">
+    <view class='context_b' wx:for="{{productData.goods_skus}}" wx:key="{{productData.goods_skus.id}}">
+        <view class='{{item.selected}}'>
+            <view class='left'>{{item.name}}</view> 
+            <view class='right'>
+              <!-- //价格及数量 -->
+              <view class='total'>
+                <view>￥{{item.price}}</view>  
+                <view class='subAdd'>
+                  <view class='count_sub' bindtap='subNum' data-goodSkusId='{{item.id}}'><view>-</view></view>
+                  <view class='num'><view style='color:{{item.num==0?"#ddd":"#000"}}'>{{item.num}}</view></view>
+                  <view class='count_add' bindtap="addNum" data-goodSkusId='{{item.id}}'><view>+</view></view> 
+                </view> 
+              </view>
+            </view>
+        </view>
+    </view>
+  </view>
+  <!--底部按钮-->
+  <view class='foot_button' wx:if="{{buttonSwitch}}">
+    <view bindtap='GoBusiness' data-shopId='{{productData.shop_id}}'><text>查看商家详情</text></view>
+    <view bindtap='GoToBuy' class='{{buyBtn}}'><text>购买</text></view>
+  </view>
+</view>

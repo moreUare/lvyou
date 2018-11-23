@@ -1,0 +1,197 @@
+.bc_blue{
+}
+/*container*/
+.container{
+  margin: 0;
+  padding: 0;
+  background: #eee;   /*背景颜色*/
+  display: flex;
+  flex-direction: column;
+}
+/****滑块*****/
+swiper{
+  width: 100%;
+  height: 350rpx;
+  background: #fff;
+}
+/*特色体验 行程规划*/
+.select_button{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+button ::after{
+  border-radius: 0;
+}
+.select_button button{
+  width: 330rpx;
+  height: 60rpx;  
+  margin-left: 30rpx;
+  border: 1px solid #000;
+  line-height: 50rpx;
+  letter-spacing: 2rpx
+}
+.select_button button:last-child{
+  margin-right: 30rpx;
+}
+.select_button button text{
+  font-size: 22rpx;
+  font-weight: bold;
+  color: rgb(0, 0, 0)
+}
+
+/*推荐*/
+.RND{
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.recommend{
+  flex: 1;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 49rpx;
+  margin-bottom: 49rpx;
+  float: left;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-left: 5rpx solid #000;
+  padding-left: 10rpx;
+}
+.district{
+  flex: 1;
+  margin-top: 49rpx;
+  margin-bottom: 49rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  letter-spacing: 1px;
+}
+.district image{
+  width: 24rpx;
+  height: 30rpx;
+  float: right;
+  margin-right: 10rpx;
+}
+.district text{
+  float: right;
+  padding-bottom: 0rpx;
+  color: rgb(113, 184, 223);
+  margin-right: 10rpx;
+}
+
+/*information*/
+.information{
+  width: 100%;
+}
+
+/*content内容*/
+.content{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: #fff;
+  border-radius: 5px; 
+  margin-bottom: 20rpx;
+}
+.content_img{
+  background-color: black;   /*图片大小*/
+  width: 690rpx;
+  height: 260rpx;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: table;
+}
+  /*文字内容*/
+.content_text_one,.content_text_two,.content_text_three{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  position: relative;
+}
+.content_text_one .bigTitle{
+  margin-top: 30rpx;
+  margin-bottom: 23rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  
+}
+.position{
+  padding-top: 26rpx;
+  padding-bottom: 63rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.position image{
+  width: 24rpx;
+  height: 30rpx;
+  margin-right: 5rpx;
+  vertical-align: middle;
+  display: inline-table;
+}
+.position text{
+  font-size: 24rpx;
+  vertical-align: middle;
+  color: rgb(113, 184, 223);
+  display: inline-block;
+  padding-bottom: 5rpx;
+}
+/**/
+.context_text_two{
+  margin-bottom: 28rpx;
+  padding: 0;
+}
+.content_text_two text{
+  font-size: 20rpx; 
+}
+/**/
+.content_text_three{
+  padding-bottom: 30rpx;
+  flex-wrap: wrap;
+}
+.price{
+  padding-top: 14rpx;
+}
+.price text:first-child{
+  font-size: 30rpx;
+  font-weight: bold;
+  
+  color: rgb(249,102,108);
+}
+.price text:nth-child(2){
+  font-size: 22rpx;
+  color: rgb(155,155,155);
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+.price text:last-child{
+  font-size: 20rpx;
+  color: #666;
+  margin-left: 15rpx;
+  letter-spacing:1rpx
+}
+/*按钮*/
+.tag{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 30rpx;
+  right: 0;
+}
+.tag text{
+  padding-left: 7rpx;
+  padding-right: 7rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border: 1px solid rgb(113,184,233);
+  font-size: 22rpx;
+  text-align: center; 
+  margin-left: 10rpx;
+  color: rgb(113,184,233);
+}
+/* 购买产品 */
+.GoToBuy{
+  
+}

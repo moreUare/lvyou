@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/my/my",
+    "pages/read/read",
+    "pages/product/product",
+    "pages/detail/detail",
+    "pages/order/order",
+    "pages/travel/travel",
+    "pages/orderDetail/orderDetail",
+    "pages/coupon/coupon",
+    "pages/aboutUs/aboutUs",
+    "pages/bindPhone/bindPhone",
+    "pages/identify/identify",
+    "pages/TravelProduct/TravelProduct",
+    "pages/PerfactInformation/PerfactInformation",
+    "pages/auth/auth",
+    "pages/district/district",
+    "pages/paySuccess/paySuccess"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "LOGO",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath":"./images/zu@2x.png",
+      "selectedIconPath":"./images/shouye@2x.png"
+    },{
+      "pagePath": "pages/recommend/recommend",
+      "iconPath": "./images/tuijian@2x.png",
+      "selectedIconPath": "./images/shoucang@2x.png"
+    },{
+      "pagePath": "pages/my/my",
+      "iconPath": "./images/wode@2x.png",
+      "selectedIconPath": "./images/heise@2x.png"
+    }]
+  }
+}

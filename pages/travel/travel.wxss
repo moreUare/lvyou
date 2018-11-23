@@ -1,0 +1,61 @@
+/* pages/travel/travel.wxss */
+page{
+  background-color: #eee;
+}
+.travel{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 30rpx;
+}
+
+/*item每一项*/
+.item{
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 1%;
+}
+/*起点*/
+.origin{
+
+  height: 90rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  line-height: 90rpx;
+  border-bottom: .5px solid #ddd;
+}
+.origin text:first-child{
+  text-align: left;
+  float: left;
+}
+.origin text:last-child{
+  text-align: right;
+  float: right;
+}
+/* 终点 */
+.destination{
+  height: 90rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  line-height: 90rpx;
+  border-bottom: .5px solid #ddd;
+}
+.destination text:first-child{
+  float: left;
+}
+.destination text:last-child{
+  float: right;
+}
+/* 使用时间 */
+.useTime{
+  height: 90rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  line-height: 90rpx;
+}
+.imgI{
+  margin-right: 20rpx;
+  vertical-align: middle;
+  margin-top: -5rpx;
+}
+

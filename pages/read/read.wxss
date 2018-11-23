@@ -1,0 +1,36 @@
+/* pages/read/read.wxss */
+/*read*/
+.read{
+  padding: 0 30rpx;
+}
+/*title*/
+.title{
+  margin-top: 55rpx;
+}
+.title text{
+  font-size: 22px;
+  font-weight: bold;
+}
+/*date*/
+.date{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.date text{
+  font-size: 12px;
+
+}
+/*article*/
+.article{
+  font-size: 14px;
+  font-family: 黑体;
+}
+.article text{
+  line-height: 30px;
+}
+/*picture*/
+.picture{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: lightblue;
+}

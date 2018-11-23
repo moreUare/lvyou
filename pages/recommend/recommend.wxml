@@ -1,0 +1,60 @@
+<!--pages/recommend/recommend.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='recommend' bindtouchmove='handtouchmove'>
+  <!--标题-->
+  <view class='title'>
+    <text>推荐</text>
+  </view>
+  <!--内容-->
+  <view class='content' wx:for="{{articleList}}" wx:key="{{articleList.id}}" data-id='{{item.id}}' bindtap='GoArticle'>
+
+      <!--  -->
+      <view class='article'>
+      <!-- 标题和时间 -->
+        <view class='description'>
+          <view class='subject'>{{item.title}}</view>
+          <view class='date'>{{item.created_at}}</view>
+        </view>
+
+        <view class='content_id'>
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+      </view>
+      
+      
+      <!-- <view class='article'>
+        <view class='description'>
+          <text class='subject'>99%的人都不知道昆明最好吃的汤圆，竟藏在只有两张桌子的小店里</text>
+          <text class='date'>2018/06/29</text>
+        </view>
+        <view class='picture'>
+          <image style='width:216rpx;height:142rpx;' class='two_picture'></image>
+          <image style='width:216rpx;height:142rpx;' class='two_picture'></image>
+          <image style='width:216rpx;height:142rpx;' class='two_picture'></image>
+        </view>
+      </view>
+      
+      <view class='article special'>
+        <view class='description'>
+          <text class='subject'>原来，在云南还可以这样过端午节！这个小长假约起来~</text>
+          <text class='date special_date'>2018/06/20</text>
+        </view>
+        <view class='picture'> 
+          <image style='width:216rpx;height:142rpx;' class='three_picture'></image>
+        </view>
+      </view>
+      <!--
+      <view class='article'>
+        <view class='description'>
+          <text class='subject'>《舌尖上的中国》里的云南美食</text>
+          <text class='date'>2018/06/01</text>
+        </view>
+        <view class='picture'>
+          <image style='width:216rpx;height:142rpx;' class='two_picture'></image>
+          <image style='width:216rpx;height:142rpx;' class='two_picture'></image>
+          <image style='width:216rpx;height:142rpx;' class='two_picture'></image>
+        </view>
+      </view> -->
+      
+  </view>
+</view>

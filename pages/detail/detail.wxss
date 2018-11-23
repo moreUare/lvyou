@@ -1,0 +1,198 @@
+page{
+  background-color: #eee;
+  padding-bottom: 93rpx;
+  color: #666;
+}
+.detail{
+
+}
+.business{
+  margin: 20rpx 30rpx;
+  background-color: #fff;
+  border-radius: 6px;
+  padding-bottom: 16rpx;
+}
+.subject{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 26rpx;
+}
+.subject > image{
+  margin: 20rpx;
+  border-radius: 5%;
+}
+.subject > view{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.name{
+  font-size: 30rpx;
+  color: #000;
+  font-weight: bold;
+}
+.evaluate{
+  display: flex;
+  flex-direction: row;
+}
+.evaluate view{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  font-size: 12px;
+  background-color: #eee;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 2px;
+}
+/**/
+.address{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.time{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+/*图片*/
+.picture{
+  margin: 20rpx 30rpx;
+  height: 204rpx;
+  line-height: 204rpx;
+  background-color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+}
+.left_img{
+  position: absolute;
+  left: 40rpx;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: table;
+}
+.right_img{
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: table;
+}
+.B_img{
+  width: 510rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 144rpx;
+}
+.scroll_box{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.item_list{
+  margin-right: 33rpx;
+  display: inline-block;
+}
+.item_book_img{
+  border-radius: 4%;
+}
+.B_img image:nth-child(3){
+  margin-right: 0
+}
+/*商家简介*/
+.introduct{
+  margin: 20rpx 30rpx;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10rpx;
+  padding-bottom: 10rpx;
+}
+.introduct view{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  letter-spacing: 
+}
+.introduct .title{
+  font-size: 26rpx;
+  color: #000;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+.jieshao{
+   height: 100rpx;
+   overflow: hidden;
+}
+/* 下拉 */
+.xiala{
+  text-align: center;
+}
+.shangla{
+  text-align: center;
+}
+/*套餐一*/
+.package_one{
+  margin: 20rpx 30rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  font-size: 14px;
+  border-radius: 6px;
+}
+.package_name{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10rpx;
+}
+.price{
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.service{
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
+}
+.service view:first-child{
+  flex: 3;
+}
+.service view:last-child{
+  flex: 1;
+  margin-right: -50rpx;
+}
+.service view:last-child > view{
+  width: 90rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  border: 1px solid #666;
+  text-align: center;
+  border-radius: 2px;
+  
+}
+/*致电商家*/
+.button{
+  width: 100%;
+  position: fixed;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: skyblue;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px -0.3px 10px 0 #666;
+}
+

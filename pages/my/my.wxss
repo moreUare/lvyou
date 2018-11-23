@@ -1,0 +1,80 @@
+/* pages/my/my.wxss */
+.my{
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+/*用户个人信息*/
+.personal{
+  display: flex;
+  flex-direction: column; 
+  margin-top: 80rpx;
+  margin-bottom: 100rpx;
+}
+.personal .head{
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+.head image{
+ border-radius: 50%;  
+}
+.personal text{ 
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+.personal button{
+  padding: 0;
+  width: 166rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  /* border: 1px solid rgb(113, 184, 233);
+  border-radius: 0.5; */
+  background-color: #fff;
+}
+.personal button::after{
+  border: 1px solid rgb(113, 184, 233);
+  border-radius: 2;
+}
+.personal button text{
+  font-size: 12px;
+  color: rgb(113, 184, 233);
+  text-align: center;
+}
+/*用户选项*/
+.select{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.select_button{
+  display: flex;
+  flex-direction: column;
+}
+.oneLineButton,.twoLineButton{
+  display: flex;
+  flex-direction: row;
+}
+.select_button button{
+  background: #fff;
+  margin: 30rpx;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.5rpx 0.5rpx 1rpx 1rpx #eee;
+  padding-top: 30rpx;
+}
+.select_button button image.tip{
+  flex: 1;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.select_button button text{
+  flex: 1;
+  font-size: 14px;
+}

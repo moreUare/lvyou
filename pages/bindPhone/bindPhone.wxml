@@ -1,0 +1,72 @@
+<view class='bindPhone'>
+  <view class='tip'>
+    <text>请输入手机号</text>
+  </view>
+  <!----------------------- 输入框 ---------------------------->
+  <view class='putholder'>
+    <input type='number' class='codeInput' placeholder-class="placeholder" maxlength='11' bindinput='inputcatch'></input>
+    <view class='inputCon'>
+      <view class="inputItem">
+        <view wx:if="{{!numList.length}}" class="cursor"></view>
+        <text wx:if="{{numList.length}}">{{numList[0]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===1}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=2}}">{{numList[1]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===2}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=3}}">{{numList[2]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===3}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=4}}">{{numList[3]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===4}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=5}}">{{numList[4]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===5}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=6}}">{{numList[5]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===6}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=7}}">{{numList[6]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===7}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=8}}">{{numList[7]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===8}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=9}}">{{numList[8]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===9}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=10}}">{{numList[9]}}</text>
+      </view>
+      <view class="inputItem">
+        <view wx:if="{{numList.length===10}}" class="cursor"></view>
+        <text wx:if="{{numList.length>=11}}">{{numList[10]}}</text>
+      </view>
+    </view>
+    <view class='dashed'>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+      <text class='dashedItem'></text>
+    </view>
+  </view>
+
+  <view class='submit'>
+    <button size='mini' style='height:70rpx;width:100%;' bindtap='identify'><text>获取验证码</text></button>
+  </view>
+</view>

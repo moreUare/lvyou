@@ -1,0 +1,36 @@
+<!--pages/my/my.wxml-->
+<view class='my'>
+  <!--用户个人信息-->
+  <view class='personal'>
+    <view class='head'>
+      <image src='{{pInfo.head_image}}' style='width:129rpx;height:129rpx;'></image> 
+    </view>
+    <text>{{pInfo.nick_name}}</text>
+    <button size='mini' bindtap='bindPhone'><text>绑定手机号</text></button>
+  </view>
+  <!--用户选项-->
+  <view class='select'>
+    <view class='select_button'>
+      <view class='oneLineButton'>
+        <button size='small' style='width:224rpx;height:224rpx;' bindtap='myTravel' disabled>
+          <view class='tip'><image src='../../images/我的-行程单@3x.png' style='width:45rpx;height:50rpx;'></image></view>     
+          <text>我的行程单</text>
+        </button>
+        <button size='small' style='width:224rpx;height:224rpx;' bindtap='myCoupon'>
+          <view class='tip'><image src='../../images/优惠券拷贝@3x.png' style='width:45rpx;height:50rpx;'></image></view>     
+          <text>我的优惠卷</text>
+        </button>
+      </view>
+      <view class='twoLineButton'>
+        <button size='small' style='width:224rpx;height:224rpx;' bindtap='myOrder'>
+          <view class='tip'><image src='../../images/订单(1)@3x.png' style='width:45rpx;height:50rpx;'></image></view>     
+          <text>我的订单</text>
+        </button>
+        <button size='small' style='width:224rpx;height:224rpx;' bindtap="AboutMe">
+          <view class='tip'><image src='../../images/关于我们(1)@3x.png' style='width:45rpx;height:50rpx;'></image></view>     
+          <text>关于我们</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

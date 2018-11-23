@@ -1,0 +1,224 @@
+page{
+  background-color: #eee;
+}
+.container{
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+/*PersonalInfo*/
+.PersonalInfo{
+  width: 100%;
+  background-color: #fff; 
+  border-radius: 2px;
+  margin-bottom: 20rpx;
+}
+.PersonalInfo > view{
+  height: 88rpx;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.PersonalInfo > view:first-child{
+  border-bottom: 1px solid #eee;
+}
+.thumbnail_image{
+  border-radius: 4px;
+}
+.PersonalInfo > view > view{
+  flex: 1;
+}
+.PersonalInfo > view > view:nth-child(2){
+  text-align: right;
+}
+.PersonalInfo input{
+  height: 88rpx;
+}
+/*产品信息*/
+.ProductsInfo{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.ProductsInfo .subject{
+  margin: 20rpx 20rpx 0 20rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+ 
+}
+.ProductsInfo .subject image{
+  width: 154rpx;
+  height: 154rx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.bigTitle{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.holder{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.goods_sk{
+  padding: 10rpx;
+  font-size: 26rpx;
+  background-color: #eee;
+  margin-right: 20rpx;
+  border-radius: 4px;
+}
+/*选线*/
+.options{
+  height: 98rpx;
+  line-height: 98rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+.options .left{
+  flex: 1;
+  text-align: left;
+  font-size: 26rpx;
+}
+.options .right{
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+}
+/*****增加或减少******/
+.price_single{
+  text-align: left;
+  padding-right: 20rpx;
+}
+.subAdd{
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 10%;
+  height: 40rpx;
+  margin-top: 29rpx;
+}
+.count_sub,.num,.count_add{
+  flex: 1;
+  text-align: center;
+  height: 40rpx;
+}
+.count_sub view,.num view,.count_add view{
+  margin-top: -29rpx;
+}
+.count_sub,.num{
+  border-right: 1px solid #eee;
+}
+
+
+/* 总价 */
+.TotalPrice{
+  height: 98rpx;
+  line-height: 98rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.TotalPrice view:first-child{
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+.TotalPrice view:last-child{
+  float: right;
+  font-size: 18px;
+  color: #ddd;
+}
+
+/*优惠券*/
+.coupon{
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  font-size:26rpx
+}
+.coupon view:first-child{
+  flex: 1;
+  text-align: left;
+  margin-left: 20rpx;
+}
+.coupon view:last-child{
+  flex: 1;
+  text-align: right;
+  margin-right: 20rpx;
+}
+/* 提交订单 */
+.submit{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 108rpx;
+  line-height: 108rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px -0.3px 10px 0 #666;
+}
+.price{
+  flex: 2;
+  margin-left: 20rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.price > text{
+  font-size: 26rpx;
+}
+.button_submit{
+  flex: 1;
+  background-color: lightskyblue;
+  color: #fff;
+  text-align: center;
+}
+
+/* 模态框 */
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+}
+.ModalDialog{
+    width: 500rpx;
+    height: 300rpx;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    margin: -170rpx -250rpx;
+    background-color: #fff;
+    border-radius: 8rpx;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.backButton{
+  background-color: lightskyblue;
+  color: #fff;
+}

@@ -1,0 +1,68 @@
+<!--pages/order/order.wxml-->
+<view class='order'>
+  <view class='head_select'>
+    <view bindtap="handAll" style='font-weight:{{selectedA?"bold":""}}'><a>全部</a></view>
+    <view bindtap="handUnStart" style='font-weight:{{selectedUN?"bold":""}}'><a>未开始</a></view>
+    <view bindtap="handOff" style='font-weight:{{selectedF?"bold":""}}'><a>已完成</a></view>
+    <view bindtap="handAfterSale" style='font-weight:{{selectedRE?"bold":""}}'><a>售后</a></view>
+  </view>
+
+  <view class='content'>
+    
+    <view class='item' bindtap='handtap' wx:for="{{orderList}}" wx:key="{{orderList.id}}" data-orderid='{{item.id}}' style='border-radius:1%'>
+      <!--图片-->
+      <view class='picture'>
+        <image src='{{item.shop.thumbnail_image.image_url}}' style='width:148rpx;height:148rpx;border-radius:8%'></image>
+      </view>
+      <!--内容-->
+      <view class='word'>
+        <text class='subject'>{{item.customer_order_goods_skus[0].goods_snap.name}}</text>
+        <view class='state'><text>状态：</text><text style='color:rgb(69,205,190);'>{{item.status_desc}}</text></view>
+        <text>目的地：{{item.shop.detail_address}}</text>
+        <text>出行时间：{{item.shop.open_time}}~{{item.shop.close_time}}</text>
+        <view class='price'><text>￥{{item.actual_price}}</text><text>￥{{item.total_price}}</text></view>       
+      </view>
+    </view>
+   
+    <!-- <view class='item' bindtap='handtap'>
+      <view class='picture'>
+        <image style='width:148rpx;height:148rpx;'></image>
+      </view>
+      <view class='word'>
+        <text class='subject'>滇池AAAA景点（5-8h）</text>
+        <view class='state'><text>状态：</text><text>已完成</text></view>
+        <text>目的地：大理</text>
+        <text>出行时间：2018/09/09 09：00~09/09 09：00</text>
+        <view class='price'><text>￥80</text><text>￥288</text></view>
+      </view>
+    </view>
+    
+    <view class='item' bindtap='handtap'>
+      <view class='picture'>
+        <image style='width:148rpx;height:148rpx;'></image>
+      </view>
+      <view class='word'>
+        <text class='subject'>滇池AAAA景点（5-8h）</text>
+        <view class='state'><text>状态：</text><text>已完成</text></view>
+        <text>目的地：大理</text>
+        <text>出行时间：2018/09/09 09：00~09/09 09：00</text>
+        <view class='price'><text>￥80</text><text>￥288</text></view>
+      </view>
+    </view>
+   
+    <view class='item' bindtap='handtap'>
+      <view class='picture'>
+        <image style='width:148rpx;height:148rpx;'></image>
+      </view>
+      <view class='word'>
+        <text class='subject'>滇池AAAA景点（5-8h）</text>
+        <view class='state'><text>状态：</text><text>已完成</text></view>
+        <text>目的地：大理</text>
+        <text>出行时间：2018/09/09 09：00~09/09 09：00</text>
+        <view class='price'><text>￥80</text><text>￥288</text></view>
+      </view>
+    </view> -->
+  </view>
+</view>
+<view>
+</view>

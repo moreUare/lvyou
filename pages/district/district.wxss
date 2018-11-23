@@ -1,0 +1,16 @@
+/* pages/district/district.wxss */
+
+.holder{
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+.pic{
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.district_name{
+  font-size: 36rpx;
+ 
+  line-height: 294rpx;
+  color: #fff;
+}

@@ -1,0 +1,30 @@
+page{
+  background: #F3F3F3;
+}
+.figcaption{
+  display: block;
+  width: 54rpx;
+  height: 47rpx;
+  margin: 260rpx auto 0;
+}
+.figure{
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.figure text{
+  font-weight: 600;
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+}
+.details{
+  display: block;
+  width: 190rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1px solid #CCCCCC;
+  border-radius: 8%;
+  margin: 40rpx auto 0;
+  text-align: center;
+  font-size: 28rpx;
+}

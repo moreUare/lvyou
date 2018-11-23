@@ -1,0 +1,82 @@
+/* pages/order/order.wxss */
+.order{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+page{
+  background-color: #eee;
+}
+.head_select{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+.head_select view{
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #000;
+  line-height: 22rpx;
+  margin-top: 33rpx;
+  margin-bottom: 33rpx;
+}
+.head_select view:last-child{
+  border-right: none;
+}
+.head_select view a{
+  font-size: 14px;
+}
+.b{
+  font-weight: bold;
+}
+/*内容*/
+.content{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+/*picture*/
+.picture{
+  width: 148rpx;
+  height: 148rpx;
+  margin: 30rpx;
+}
+/*word*/
+.word{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+text{
+  font-size: 11px;
+  line-height: 160%;
+}
+/*景点*/
+.subject{
+  font-size: 16px;
+  font-weight: bold;
+}
+.state text:last-child{
+  color: lightblue;
+}
+/*price*/
+.price text:first-child{
+  color: red;
+  font-size: 14px;
+}
+.price text:last-child{
+  margin-left: 10rpx;
+  color: #ccc;
+  text-decoration: line-through;
+}
+

@@ -1,0 +1,103 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail'>
+  <view class=' business header'>
+    <view class='subject'>
+      <image src='{{shop.thumbnail_image.image_url}}' style='width:144rpx;height:144rpx;background:lightblue'></image>
+      <view class='words'>
+        <view class='name'>{{shop.name}}</view>
+        <!-- {{shop.rate}} -->
+        <view class='rate'wx:if="{{shop.rate == 5}}">
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 0rpx;'></image>
+        </view>
+        <view class='rate'wx:if="{{shop.rate == 4}}">
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 0rpx;'></image>
+        </view>
+        <view class='rate'wx:if="{{shop.rate == 3}}">
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 0rpx;'></image>
+        </view>
+        <view class='rate'wx:if="{{shop.rate == 2}}">
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 0rpx;'></image>
+        </view>
+        <view class='rate'wx:if="{{shop.rate == 1}}">
+          <image src='../../images/xingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 0rpx;'></image>
+        </view>
+        <view class='rate'wx:if="{{shop.rate == 0}}">
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 8rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:22rpx;height:22rpx;margin-right: 0rpx;'></image>
+        </view>
+        <view class='evaluate'>
+          <view wx:for="{{shop.shop_tags}}" wx:key="{{shop.shop_tags}}" wx:if="{{index < 2}}">{{item.tag}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='address'>地址：{{shop.district.full_name}}{{shop.detail_address}}</view>
+    <view class='time'>营业时间：上午{{shop.open_time}}--下午{{shop.close_time}}</view>
+  </view>
+  <!--图片-->
+  <view class='picture' >
+    <image src='../../images/zuo.png' style='width:10rpx;height:18rpx' class='left_img'></image>
+    <view class='B_img scroll_box'>
+      <scroll-view class="scroll-view_x" scroll-x style="width: auto;overflow:hidden;">
+        <view class="item_list" wx:for="{{shop.detail_banner_images}}" wx:key="{{shop.detail_banner_images.id}}">
+          <image src="{{item.image_url}}" class="item_book_img" style='width:144rpx;height:144rpx;background:lightblue' mode="aspectFill"></image>
+        </view>
+        <view class="item_list" wx:for="{{shop.detail_banner_images}}" wx:key="{{shop.detail_banner_images.id}}">
+          <image src="{{item.image_url}}" class="item_book_img" style='width:144rpx;height:144rpx;background:lightblue' mode="aspectFill"></image>
+        </view>
+        <view class="item_list" wx:for="{{shop.detail_banner_images}}" wx:key="{{shop.detail_banner_images.id}}">
+          <image src="{{item.image_url}}" class="item_book_img" style='width:144rpx;height:144rpx;background:lightblue' mode="aspectFill"></image>
+        </view>
+        <view class="item_list" wx:for="{{shop.detail_banner_images}}" wx:key="{{shop.detail_banner_images.id}}">
+          <image src="{{item.image_url}}" class="item_book_img" style='width:144rpx;height:144rpx;background:lightblue' mode="aspectFill"></image>
+        </view> 
+      </scroll-view>
+    </view>
+    <image src='../../images/you.png' style='width:10rpx;height:18rpx' class='right_img'></image>
+  </view>
+  <!--商家简介-->
+  <view class='introduct'>
+    <view class='title'>商家简介</view>
+    <view class='{{styleclass}}'>{{shop.description}}</view>
+    <view class='xiala' bindtap='opendiv' wx:if="{{show}}"><image src='../../images/xiala (2).png' style='width:30rpx;height:30rpx;'></image></view>
+    <view class='shangla' bindtap='closediv' wx:if="{{!show}}"><image src='../../images/shangla.png' style='width:30rpx;height:30rpx;'></image></view>
+  </view>
+  <!-- 套餐 -->
+  <view class='package_one' wx:for="{{goodsList}}" wx:key="{{item.id}}">
+    <view class='package_name'>{{item.goods_snap.name}}</view>
+    <view class='price'>价格：{{item.goods_snap.price}}</view>
+    <view class='description'>
+      <view class='service'>
+        <view>服务项：{{item.goods_snap.description}}</view>
+        <view><view bindtap='checkBss' data-id='{{item.goods_snap.goods_id}}'>查看</view></view>
+      </view>    
+    </view>
+  </view>   
+  
+</view>
+<!-- 致电商家 -->
+<view class='button' bindtap="calling" data-phone='{{shop.contact}}'>
+    <view>致电商家</view>
+</view>

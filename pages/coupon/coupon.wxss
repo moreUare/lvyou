@@ -1,0 +1,48 @@
+/* pages/coupon/coupon.wxss */
+page{
+  background-color: #eee;
+}
+.coupon{
+  
+}
+.article{
+  background-color: #fff;
+  margin: 30rpx;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/**left**/
+.left{
+  flex: 2;
+  margin: 30rpx 0;
+  padding: 0rpx 30rpx 0rpx 80rpx;
+  border-right: 1px dotted #ddd;
+}
+.type image{
+  margin-right: 10rpx;
+}
+.type text{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.date text{
+  font-size: 12px;
+  color: #ccc;
+}
+/**right**/
+.right{
+  flex: 1;
+  line-height: 160rpx;
+  text-align: center;
+}
+.right text:first-child{
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-right: 5rpx;
+}
+.right text:last-child{
+  font-size: 12px;
+}

@@ -1,0 +1,8 @@
+<!--pages/district/district.wxml-->
+<view class='district'>
+  <view class='holder' wx:for="{{districtList}}" wx:key="{{item.id}}" bindtap='selectDistrict' data-district="{{item.district_id}}"  data-district_name="{{item.district.full_name}}">
+    <view style='width:100%;height:294rpx;background-image:url({{item.wide_cover_image.image_url}})' class='pic'>
+      <text class='district_name'>{{item.district.name}}</text>
+    </view>
+  </view>
+</view>

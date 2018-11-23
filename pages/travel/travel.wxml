@@ -1,0 +1,34 @@
+
+<view class='travel'>
+ 
+  <view class='item'>
+    <view class='origin'>
+      <text>起点</text>
+      <text>云南省昆明市木水花交易市场</text>
+    </view>
+    <view class='destination'>
+      <text>终点</text>
+      <text>云南省昆明市同德广场</text>
+    </view>
+    <view class='useTime'>
+      <image src='../../images/时间@3x.png' style='width:30rpx;height:30rpx' class='imgI'></image>
+      <text>2018/09/09 09:00 ~ 2018/10/10 09:00</text>
+    </view>
+  </view>
+
+  <view class='item'>
+    <view class='origin'>
+      <text>起点</text>
+      <text>云南省昆明市木水花交易市场</text>
+    </view>
+    <view class='destination'>
+      <text>终点</text>
+      <text>云南省昆明市同德广场</text>
+    </view>
+    <view class='useTime'>
+      <image src='../../images/时间@3x.png' style='width:30rpx;height:30rpx' class='imgI'></image>
+      <text>2018/09/09 09:00 ~ 2018/10/10 09:00</text>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,111 @@
+page{
+  background-color: #fff;
+}
+.bindPhone{
+  margin-top: 60rpx;
+}
+/*请输入手机号*/
+.tip{
+  margin-left: 45rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.tip text{
+  font-size: 16px;
+}
+/*手机号*/
+.phoneNumber{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.phoneNumber input{
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 5rpx 3rpx;
+  margin-right: 5rpx;
+  text-align: center;
+  font-weight: bold;
+  height: 46rpx;
+}
+.phoneNumber view:last-child{
+  margin: 0
+}
+/*按钮*/
+.submit{
+  margin-top: 40rpx;
+  margin-left: 45rpx;
+  margin-right: 45rpx;
+}
+.submit button{
+  background-color: #000;
+  line-height: 70rpx;
+}
+.submit button text{
+  color: #eee;
+}
+
+/**************号码输入框*******************/
+.dashed{
+  width: 660rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -60rpx;
+}
+
+.dashedItem{
+  flex: 1;
+  display: inline-block;
+  border: 1rpx solid #ccc;
+  height: 60rpx;
+  margin-right: 3rpx;
+}
+
+.codeInput{
+  display: block;
+  width: 130%;
+  color: #000;
+  height: 100rpx;
+  margin-left: -33%;
+  margin-bottom: -60rpx;
+}
+
+.cursor {
+  width: 1px;
+  height:60rpx;
+  background-color: #000;
+  animation: focus 0.7s infinite;
+}
+
+.getcode.active{
+  background: #000;
+}
+
+@keyframes focus {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.inputCon{
+  width: 660rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
+.inputItem{
+  height: 60rpx;
+  line-height: 60rpx;
+  flex: 1;
+  text-align: center;
+}
+.inputItem>text{
+  font-size: 43rpx;
+}
+/******************************************/

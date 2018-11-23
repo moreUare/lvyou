@@ -1,0 +1,36 @@
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap='GoAuth'>点击进行认证</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">认证页面</text>
+  </view>
+
+  <button bindtap='test'>测试</button>
+</view> -->
+
+
+<view class="container">
+  <view class="userinfo">
+    <!--  -->
+    <view wx:if="{{!hasUserInfo && canIUse}}" class='authpage'> 
+        <image src='../../images/logo@2x.png' class='picture'></image>  
+        <view class='context'>
+          <view class='text_zero'>走向行走|目的地特色体验</view>
+          <view class='text_one'>Hi~请登录</view>
+          <view class='text_two'>登录后我们将为您更好的服务</view>
+        </view>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信快捷登录 </button>
+    </view>  
+    <!--  -->
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+  </view>
+  
+</view>

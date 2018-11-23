@@ -1,0 +1,72 @@
+<!--pages/PerfactInformation/PerfactInformation.wxml-->
+<view class='container'>
+  <view class='header PersonalInfo'>
+    <view><view>联系人*</view><view><input type='text' placeholder="请输入" bindinput="userNameInput"></input></view></view>
+    <view><view>手机号*</view><view><input type='number' placeholder="请输入" bindinput='userTelephone'></input></view></view>
+  </view>
+
+  <!-- 产品信息 -->
+  <view class="body ProductsInfo">
+    <!-- 图文加标签 -->
+    <view class='subject'>
+      <view><image src='{{goods.goods_snap.thumbnail_image.image_url}}' style='width:154rpx;height:154rpx;background:lightblue' class='thumbnail_image'></image></view>
+      <view>
+        <view class='bigTitle'><text>{{goods_name}}</text></view>
+        <view class='holder'>
+          <view wx:for="{{goods_skus}}" wx:key="{{goods_skus.id}}" class='goods_s'>
+            <view wx:if="{{item.num != 0}}" class='goods_sk'>{{item.name}} X{{item.num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='options' wx:for="{{goods_skus}}" wx:key="{{item.id}}" data-id='{{item.id}}'> 
+      <view class='left'>{{item.name}}</view>
+      <view class='right'>
+          <view class='price_single'>￥{{item.price}}</view>
+          <view class='subAdd'>
+              <view class='count_sub' bindtap='subNum' data-goodSkusId='{{item.id}}'><view>-</view></view>
+              <view class='num'><view style='color:{{item.num==0?"#ddd":"#000"}}'>{{item.num}}</view></view>
+              <view class='count_add' bindtap="addNum" data-goodSkusId='{{item.id}}'><view>+</view></view> 
+          </view> 
+      </view>
+    </view>
+    <!-- <view class='options'>
+      <view class='left'>亲子套餐（2大1小）</view>
+      <view class='right'>￥180</view>
+    </view>
+    <view class='options'>
+      <view class='left'>成人套餐（2位）</view>
+      <view class='right'>￥300</view>
+    </view> -->
+    <view class='TotalPrice'>
+      <view style='font-size: 32rpx;margin-left:16rpx;'>￥{{total}}</view><view style='font-size:26rpx;'>小计</view>
+    </view>
+  </view>
+  <view class='coupon' bindtap='ToCoupon'>
+    <view><image src='../../images/优惠券@2x.png' style='width:40rpx;height:30rpx; margin-right:10rpx;'></image>优惠券</view>
+    <view style='font-size:26rpx;letter-spacing:4rpx'>-{{money}}元 > </view>
+  </view>
+</view>
+<!-- 底部提交按钮 -->
+<view class='submit'>
+  <view class='price'><text>总额：</text>￥{{total-money>0?total-money:0}}</view>
+  <view class='button_submit' bindtap="refer">提交订单</view>
+</view>
+
+<!-- 模态框 提交个人信息-->
+<view class='mask' catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class='ModalDialog submit' wx:if="{{showModal}}">
+  <text style='font-size:16px;font-weight:normal;margin-top:30rpx;margin-bottom:30rpx'>请输入个人信息</text>
+  <view class='reback'>
+    <button bindtap='goBack' style='height:60rpx; line-height:60rpx;' class='backButton' size='mini'>好的</button>
+  </view>
+</view>
+
+<!-- 模态框 提交个人信息-->
+<view class='mask' catchtouchmove="preventTouchMove" wx:if="{{showInfo}}"></view>
+<view class='ModalDialog submit' wx:if="{{showInfo}}">
+  <text style='font-size:16px;font-weight:normal;margin-top:30rpx;margin-bottom:30rpx'>请选择产品规格</text>
+  <view class='reback'>
+    <button bindtap='goBack' style='height:60rpx; line-height:60rpx;' class='backButton' size='mini'>好的</button>
+  </view>
+</view>

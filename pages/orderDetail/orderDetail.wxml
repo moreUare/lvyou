@@ -1,0 +1,141 @@
+<view class="orderDetail">
+  <!-- product -->
+  <view class='product'>
+    <view class='picture'><image src='{{orderInfo.shop.thumbnail_image.image_url}}' style='width:148rpx;height:148rpx;border-radius:5%'></image></view>
+    <view class='right_word'>
+      <text>{{orderInfo.customer_order_goods_skus[0].goods_snap.name}}</text>
+      <!-- 评价 -->
+      <!-- {{shop.rate}} -->
+        <view class='evaluate' wx:if="{{orderInfo.shop.rate == 5}}">
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+        </view>
+        <view class='evaluate' wx:if="{{orderInfo.shop.rate == 4}}">
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+        </view>
+        <view class='evaluate' wx:if="{{orderInfo.shop.rate == 3}}">
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+        </view>
+        <view class='evaluate' wx:if="{{orderInfo.shop.rate == 2}}">
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+        </view>
+        <view class='evaluate' wx:if="{{orderInfo.shop.rate == 1}}">
+          <image src='../../images/xingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+        </view>
+        <view class='evaluate'wx:if="{{orderInfo.shop.rate == 0}}">
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+          <image src='../../images/huisexingji (2).png' style='width:28rpx;height:28rpx;'></image>
+        </view>
+      <!-- 评价 -->
+      <view class='evaluate_word'>
+        <text wx:for="{{orderInfo.shop.shop_tags}}" wx:key="{{item.index}}">{{item.tag}}</text>
+      </view>
+    </view><!--right_word-->
+  </view><!--product-->
+  <!--订单信息 -->
+  <view class='order_infor'>
+    <!--  -->
+    <view class='number flexBox'>
+      <text class='first_child'>订单编号</text>
+      <text class='last_child'>{{orderInfo.no}}</text>
+    </view>
+    <!--  -->
+    <view class='payment flexBox' wx:if="{{orderInfo.status != 'WAIT_PAY' && orderInfo.status != 'CLOSED'}}">
+      <text class='first_child'>付款时间</text>
+      <text class='last_child'>{{orderInfo.customer_order_payment.created_at}}</text>
+    </view>
+    <!--  -->
+    <view class='destination flexBox'>
+      <text class='first_child'>目的地</text>
+      <text class='last_child'>{{orderInfo.shop.detail_address}}</text>
+    </view>
+    <!--  -->
+    <view class='name flexBox'>
+      <text class='first_child'>产品名称</text>
+      <view class='tag last_child'>
+        <text wx:for="{{orderInfo.customer_order_goods_skus}}" wx:key="{{item.id}}">{{item.goods_sku.name}} x{{item.quantity}}</text>
+      </view>
+    </view>
+    <!--  -->
+    <view class='status flexBox'>
+      <text class='first_child'>状态</text>
+      <text class='last_child'>{{orderInfo.status_desc}}</text>
+    </view>
+    <!--  -->
+    <view class='price flexBox'>
+      <text class='first_child'>价格</text>
+      <text class='last_child'>{{orderInfo.actual_price}}</text>
+    </view>
+    <!--  -->
+    <!-- <view class='remarks flexBox'>
+      <text class='first_child'>备注</text>
+      <text class='last_child'>有小孩请准备宝宝椅</text>
+    </view> -->
+  </view><!-- order_infor -->
+  <view class='order_contact'>
+    <!-- 出行口令 -->
+    <view class='password' wx:if="{{orderInfo.status != 'WAIT_PAY' && orderInfo.status != 'CLOSED'}}">
+      <view>出行口令</view>
+      <view>{{orderInfo.customer_order_credential.code}}</view>
+    </view>
+    <view class='contact'>
+      <text style='height:68rpx'>联系商家</text>
+      <button style='padding-left:0;padding-right:0;width:320rpx;' bindtap='calling' data-telephone="{{orderInfo.shop.contact}}"><image src='../../images/call@2x.png' style='display:table;width:100%;height:68rpx'></image></button>
+    </view>
+  </view><!--order_contact-->
+  <view class='cancel' bindtap='cancelOrder'><text>取消订单</text></view>
+</view>
+
+<!-- mask 蒙版 -->
+<view class='mask' catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<!-- preventTouchMove阻止事件冒泡 -->
+<!-- 模态框 取消订单 -->
+<view class='ModalDialog' wx:if="{{showModal}}">
+  <text>请选择取消原因</text>
+  <!-- /*单选*/ -->
+  <radio-group class="radio-group">
+    <label class='radio'><radio value='1'>购买产品后到店被告知无法消费</radio></label>
+    <label class='radio'><radio value='2'>行程有变</radio></label>
+    <label class='radio'><radio value='3'>地理位置不符</radio></label>
+    <label class='radio'><radio value='4'>与商家联系不上</radio></label>
+    <label class='radio'><radio value='5'>我临时有事</radio></label>
+    <label class='radio'><radio value='6'>其他</radio></label>
+  </radio-group>
+  <!-- 按钮 -->
+  <view class='reback'>
+    <button bindtap='goon'><text>提交</text></button>
+    <button bindtap='go'><text>取消</text></button>
+  </view>
+</view>
+<!-- 模态框 提交成功 -->
+<view class='mask' catchtouchmove="preventTouchMove" wx:if="{{showResult}}"></view>
+<view class='ModalDialog submit' wx:if="{{showResult}}">
+  <text style='font-size:20px;margin-top:36rpx;font-weight:normal'>提交成功！</text>
+  <text style='font-size:16px;margin-top:-20rpx;font-weight:normal;color:#ddd'>如有问题请联系客服</text>
+  <view class='reback' style='marin-top: 80rpx'>
+    <button bindtap='goBack'><text>提交</text></button>
+    <button bindtap='go'><text>取消</text></button>
+  </view>
+</view>

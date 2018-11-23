@@ -1,0 +1,7 @@
+<view>
+  <image src='../../images/paySuccess.png' class='figcaption'></image>
+  <view class="figure">
+    <text>支付成功</text>
+  </view>
+  <view class="details" bindtap="searchOrderDetail">查看订单详情</view>
+</view>

@@ -1,0 +1,75 @@
+<view class='identify'>
+  <view class='info'>
+    <text>验证码已发送至+86 {{phoneNumber}}</text>
+    <view><text>{{countdown}}s</text><text>后重新获取</text></view>
+  </view>
+
+<!----------------------- 输入框 ---------------------------->
+<view class='putholder'>
+<input type='number' class='codeInput' placeholder-class="placeholder" maxlength='4' bindinput='inputcatch'></input>
+<view class='inputCon'>
+  <view class="inputItem">
+    <view wx:if="{{!identifyList.length}}" class="cursor"></view>
+    <text wx:if="{{identifyList.length}}">{{identifyList[0]}}</text>
+  </view>
+  <view class="inputItem">
+    <view wx:if="{{identifyList.length===1}}" class="cursor"></view>
+    <text wx:if="{{identifyList.length>=2}}">{{identifyList[1]}}</text>
+  </view>
+  <view class="inputItem">
+    <view wx:if="{{identifyList.length===2}}" class="cursor"></view>
+    <text wx:if="{{identifyList.length>=3}}">{{identifyList[2]}}</text>
+  </view>
+  <view class="inputItem">
+    <view wx:if="{{identifyList.length===3}}" class="cursor"></view>
+    <text wx:if="{{identifyList.length>=4}}">{{identifyList[3]}}</text>
+  </view>
+</view>
+  <view class='dashed'>
+    <text class='dashedItem'></text>
+    <text class='dashedItem'></text>
+    <text class='dashedItem'></text>
+    <text class='dashedItem'></text>
+  </view>
+</view>
+<!------------------------ 输入框 ------------------------------->
+
+  <view class='bind'>
+    <button size='mini' style='width:100%;height:70rpx' bindtap='bindSuccess'>
+      <text>绑定</text>
+    </button>
+  </view>
+  <view class='doubt'>
+    <text>收不验证码？</text>
+  </view>
+</view>
+<!-- 蒙版 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal || showFail || showIdentify}}"></view>
+<!-- 模态框 绑定成功 -->
+<view class="modalDlgSucc" wx:if="{{showModal}}">
+    <image src="../../images/笑脸@3x.png"></image>
+    <text>绑定成功!</text>
+    <button bindtap="backSpace" size='mini'><text>好的</text></button>
+</view>
+<!-- 模态框 绑定失败 -->
+<view class="modalDlgLoss" wx:if="{{showFail}}">
+    <image src="../../images/哭脸拷贝@3x.png"></image>
+    <text>绑定失败!</text>
+    <text>您的手机号已被绑定</text>
+    <view class='reback'>
+      <button bindtap="go" size='mini'><text>取消</text></button>
+      <button bindtap="go" size='mini'><text>去增加</text></button>
+    </view>
+</view>
+<!-- 模态框 验证码输入错误 -->
+<view class='modalDlgLoss' wx:if="{{showIdentify}}">
+     <image src="../../images/哭脸拷贝@3x.png"></image>
+    <text>验证码输入错误</text>
+    <text>请重新输入</text>
+    <view class='reback'>
+      <button bindtap="go" size='mini'><text>取消</text></button>
+      <button bindtap="go" size='mini'><text>去增加</text></button>
+    </view>
+</view>
+
+

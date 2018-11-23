@@ -1,0 +1,181 @@
+/* 产品 */
+page{
+  background-color: #eee;
+  position: relative;
+}
+.TravelProduct{
+
+}
+.select_type{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 16rpx;
+  padding-left: 30rpx;
+  background-color: #fff;
+  margin: 20rpx 30rpx 20rpx 30rpx;
+  border-radius: 4px;
+  
+}
+/*content内容*/
+.content{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: #fff;
+  border-radius: 5px; 
+  margin-bottom: 20rpx;
+}
+.content_img{
+  background-color: black;   /*图片大小*/
+  width: 690rpx;
+  height: 260rpx;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: table;
+}
+  /*文字内容*/
+.content_text_one,.content_text_two,.content_text_three{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  position: relative;
+}
+.content_text_one .bigTitle{
+  margin-top: 30rpx;
+  margin-bottom: 23rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  
+}
+.position{
+  padding-top: 26rpx;
+  padding-bottom: 63rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.position image{
+  width: 24rpx;
+  height: 30rpx;
+  margin-right: 5rpx;
+  vertical-align: middle;
+}
+.position text{
+  font-size: 24rpx;
+  color: rgb(113, 184, 223);
+  vertical-align: middle;
+  display: inline-block;
+  padding-bottom: 5rpx;
+}
+/**/
+.content_text_two text{
+  font-size: 20rpx;
+}
+/**/
+.content_text_three{
+  padding-bottom: 30rpx;
+}
+.price{
+  padding-top: 14rpx;
+}
+.price text:first-child{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  color: rgb(249,102,108);
+}
+.price text:nth-child(2){
+  font-size: 22rpx;
+  color: rgb(155,155,155);
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+.price text:last-child{
+  font-size: 20rpx;
+  margin-left: 15rpx;
+  letter-spacing: 1rpx;
+  color: #666;
+}
+/*按钮*/
+.tag{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 30rpx;
+  right: 0;
+}
+.tag text{
+  padding-left: 7rpx;
+  padding-right: 7rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border: 1px solid rgb(113,184,233);
+  color: rgb(113,184,233);
+  font-size: 22rpx;
+  text-align: center; 
+  margin-left: 10rpx;
+}
+/* 模态框 */
+.ModalDialog{
+  position: absolute;
+  width: 100%;
+  height: 1105rpx;
+  top: 80rpx;
+  left: 0; right: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.subject{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-bottom: 40rpx;
+}
+.holder:first-child .subject{
+  margin-top: 50rpx;
+}
+.category_kind,.ok{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 30rpx;
+}
+
+.category_item{
+  width: 120rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  background-color: #eee;
+  font-size: 12px;
+  margin-right: 20rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+  border-radius: 6%;
+}
+/*按钮被按下*/
+.category_item_blue{
+  width: 120rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  background-color: rgb(113,184,233);
+  font-size: 12px;
+  margin-right: 20rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.ok{
+  height: 74rpx;
+  line-height: 74rpx;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: rgb(113,184,233);
+  border-radius: 4px;
+}
+.ok text{
+  font-size: 12px;
+  color: #fff;
+  margin: 0 auto;
+}

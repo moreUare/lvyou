@@ -1,0 +1,48 @@
+<!--pages/TravelProduct/TravelProduct.wxml-->
+<view class='TravelProduct'>
+  <view class='select_type' bindtap='handSelect'>选择您喜欢的分类</view>
+  
+  <!--content-->
+    <!-- 容器 -->
+    <view class='holder' wx:for="{{products}}" wx:key="{{products.goods_snap.id}}">
+      <view class='content' bindtap='handProduct' data-foodId='{{item.id}}'>
+        <!--图片-->
+        <view class='img'>
+          <image src='{{item.goods_snap.wide_cover_image.image_url}}' style='width:690rpx;height:260rpx;' class='content_img'></image>
+        </view>
+        <!--产品信息-->
+        <view class='content_text_one'>
+          <view class='bigTitle'><text>{{item.goods_snap.name}}</text></view>
+          <view class='position'>
+            <image src='../../images/dingwei.png'></image>
+            <text>{{item.shop.detail_address}}</text>
+          </view>
+        </view>
+        <view class='content_text_two'>
+          <text>{{item.goods_snap.description}}</text>
+        </view>
+        <view class='content_text_three'>
+          <view class='price'>
+            <text>￥{{item.goods_snap.price}}</text><text>￥{{item.goods_snap.original_price}}</text><text>已售{{item.sell_count}}</text>
+          </view>
+          <view class='tag'>
+            <text wx:for="{{item.shop.shop_tags}}" wx:key="{{item.id}}" wx:if="{{index < 2}}">{{item.tag}}</text>
+          </view>
+        </view>
+      </view>    
+    </view>
+</view>
+<!-- 模态框 选择你喜欢的分类 -->
+
+<view class='ModalDialog' wx:if="{{showModal}}">
+  <view class='holder older' wx:for="{{category}}" wx:key="{{category.id}}">
+    <!-- 大标题 -->
+    <view class='subject' data-BigId='{{item.id}}'>{{item.name}}</view>
+    <view class='category_kind'>  
+        <!-- 小标题  -->
+       <view class='category_item' wx:for="{{item.child_goods_categories}}" wx:key="{{item.child_goods_categories.id}}" data-SmallId='{{item.id}}' bindtap='SelectedIt' style='color:{{item.selected?"rgb(113, 184, 223)":"#000"}}' data-state='{{item.selected}}'>{{item.name}}</view>        
+       <!-- 条件 三元 -->
+    </view>
+  </view>
+  <view class='ok' bindtap='go'><text>确定</text></view>
+</view>

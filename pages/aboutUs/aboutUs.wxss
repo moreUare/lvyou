@@ -1,0 +1,17 @@
+.aboutUs{
+  padding: 40rpx 30rpx;
+  padding-bottom: 0rpx;
+}
+page{
+  background-color: #eee;
+}
+.Part_one,.Part_two{
+  font-size: 14px;
+  line-height: 50rpx;
+}
+.picture{
+  background-color: lightblue;
+  width: 689rpx;
+  height: 354rpx;
+  margin: 50rpx 0;
+}

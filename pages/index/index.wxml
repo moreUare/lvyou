@@ -1,0 +1,63 @@
+<!--首页-->
+<view class='container'>
+
+  <view class="userinfo" wx:if="{{false}}">
+    <open-data type="userNickName"></open-data>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  
+  <!--滑块-->
+  <swiper indicator-dots='true' autoplay='true' interval='5000' duration='500'>
+    <block wx:for="{{imgUrls}}" wx:key="{{data.index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" style='width:100%;height:100%'/>
+      </swiper-item> 
+    </block>
+  </swiper>
+  <!--特色体验 行程规划-->
+  <view class='select_button bc_blue'>
+    <button size='mini' bindtap='handExperience'><text>特色体验</text></button>
+    <button size='mini' disabled='disabled'><text>行程规划</text></button>
+  </view>
+
+  <!--推荐-->
+  <view class='RND'>
+    <view class='recommend'>推荐</view>
+    <view class='district' bindtap='GoCity'>
+        <text style='float:right'>></text>
+        <text style='font-size:26rpx;'>{{context}}</text> 
+        <image src='../../images/dingwei.png'></image> 
+    </view>
+  </view>
+
+  <view class='information' wx:for="{{goods}}" wx:key="{{goods.index}}">
+    <!--content-->
+    <view class='content' bindtap='handProduct' data-foodId='{{item.id}}'>
+      <!--图片-->
+      <view class='img'>
+        <image src='{{item.goods_snap.wide_cover_image.image_url}}' style='width:690rpx;height:260rpx;' class='content_img'></image>
+      </view>
+      <!--产品信息-->
+      <view class='content_text_one'>
+        <view class='bigTitle'><text>{{item.goods_snap.name}}</text></view>
+        <!-- 地址 -->
+        <view class='position'>
+          <image src='../../images/dingwei.png'></image>
+          <text>{{item.shop.detail_address}}</text>
+        </view>
+
+      </view>
+      <view class='content_text_two'>
+        <text>{{item.goods_snap.description}}</text>
+      </view>
+      <view class='content_text_three'>
+        <view class='price'>
+          <text>￥{{item.goods_snap.price}}</text><text>￥{{item.goods_snap.original_price}}</text><text>已售{{item.sell_count}}</text>
+        </view>
+        <view class='tag' >
+          <text wx:for="{{item.shop.shop_tags}}" wx:key="{{item.id}}" wx:if="{{index < 2}}">{{item.tag}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
